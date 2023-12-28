@@ -14,13 +14,15 @@ import java.util.logging.Logger;
  * ObjectFactory class provides factory methods to get objects for the game.
  */
 public class ObjectFactory {
-  private ObjectFactory() {
-  }
 
   private static final LifecycleNotificationService NOTIFICATION_SERVICE = new ConsoleLogNotificationService();
   private static final GameBoard GAME_BOARD = new PositionedHashMapBoard();
   private static final BoardFacadeService BOARD_FACADE_SERVICE = new BoardFacadeService(GAME_BOARD);
   private static final GameEngine GAME_ENGINE = new GameEngineImpl(BOARD_FACADE_SERVICE, NOTIFICATION_SERVICE);
+
+  // Hide the constructor intentionally to forbid the creation of instances
+  private ObjectFactory() {
+  }
 
   public static LifecycleNotificationService notificationService() {
     return NOTIFICATION_SERVICE;

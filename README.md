@@ -3,14 +3,14 @@
 <img width="592" alt="Screenshot 2023-03-16 at 14 24 17" src="https://user-images.githubusercontent.com/40858461/225616425-3d5685f3-26c1-4ded-b2ea-36bf4b2313bc.png">
 
 
-This application is a howework task for the https://proxx.app.
+This application is a homework task for the https://proxx.app.
 
 
 ## Choosing NxN board
 
 In order to determine a data structure to hold the game board in memory we have to understand the balance between easement of API that the structure gives us, and the volume of resources it utilizes. 
 Of course, we can use 2D arrays, lists of lists, key-value entries, and other similar structures to represent the game board, however, the best API for that provides the java.util.Map. It has many methods just out of the box and many of them are useful for us. Hash-based maps are usually heavy in memory and left a footprint, and we should be careful when using this structure for many items. 
-However hash-based implementations are closed to have O(1) complexity for put/get operations, and having the maximum size of the game board is limited (40X40), the HashMap is closed to have O(1) complexity. In this case, the memory footprint can be sacrificed in favor of a good API for better integration.
+However, hash-based implementations are closed to have O(1) complexity for put/get operations, and having the maximum size of the game board is limited (40X40), the HashMap is closed to have O(1) complexity. In this case, the memory footprint can be sacrificed in favor of a good API for better integration.
 
 ## Initialization of the game
 
